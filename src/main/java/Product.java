@@ -8,6 +8,7 @@ public class Product {
     private int id;
     private String name;
     private int price;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd.MM.yyyy")
     private Date date;
 
     public Product() {
