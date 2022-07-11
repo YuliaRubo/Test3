@@ -114,18 +114,6 @@ public static List<String> getJsonFromList(List<Product>list) throws ParseExcept
     }
     return listNew;
 }
-//    List<Product> listNew = list;
-//    ObjectMapper mapper = new ObjectMapper();
-//    String json = null;
-//    for (Product p : listNew) {
-//        Product pd = new Product();
-//        SimpleDateFormat dateformat = new SimpleDateFormat("dd.MM.yyyy");
-//
-//        json = mapper.writeValueAsString(pd);
-//    }
-//
-//
-//    return json;
 
 //        List<Product>listNew = list;
 //        //for (Product p: listNew){
