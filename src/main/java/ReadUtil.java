@@ -98,10 +98,10 @@ public class ReadUtil {
         }
         return newList;
     }
-public static String getJsonFromList(List<Product>list) throws ParseException, JsonProcessingException {
-    List<Product> listNew = list;
+public static List<String> getJsonFromList(List<Product>list) throws ParseException, JsonProcessingException {
+    List<String> listNew = new ArrayList<>();
     String json = null;
-    for (Product p : listNew) {
+    for (Product p : list) {
         Product product = new Product();
         product.setId(p.getId());
         product.setName(p.getName());
@@ -109,9 +109,10 @@ public static String getJsonFromList(List<Product>list) throws ParseException, J
         product.setDate(p.getDate());
         ObjectMapper objectMapper = new ObjectMapper();
         json = objectMapper.writeValueAsString(product);
+        listNew.add(json);
         //System.out.println(json);
     }
-    return json;
+    return listNew;
 }
 //    List<Product> listNew = list;
 //    ObjectMapper mapper = new ObjectMapper();
