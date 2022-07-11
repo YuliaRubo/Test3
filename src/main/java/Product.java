@@ -1,7 +1,7 @@
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDate;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Product {
@@ -52,10 +52,10 @@ public class Product {
     public void setDate(Date date) {
         this.date = date;
     }
-
+    DateFormat df = new SimpleDateFormat("dd.MM.yyyy");
     @Override
     public String toString() {
-        return "Product{" +
+        return "{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
