@@ -7,8 +7,7 @@ public class Main {
     public static void main(String[] args) throws ParseException, JsonProcessingException {
       List<Product>pt = ReadFromFile.getInfoFromFile();
       List<String> newList= ReadUtil.getJsonFromList(pt);
-        System.out.println(pt);
-        System.out.println(newList);
+      System.out.println(newList);
 
 
 
